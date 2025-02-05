@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-x5e(9g4uyg%6fel^fp-xyq!yi+3e_e%+s)y@o3a&okug=5v5mj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","dev.leandergoetz.eu","blog.leandergoetz.eu","leandergoetz.eu"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1","dev.leandergoetz.eu","blog.leandergoetz.eu","leandergoetz.eu","buecherboerse-r33z.onrender.com","bookmarket-frontend.vercel.app"]
 
 # Application definition
 
@@ -120,7 +120,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
     "https://nuxt-auth-new.vercel.app",
+    "https://bookmarket-frontend.vercel.app",
 ]
 
 
@@ -162,6 +164,8 @@ CSRF_COOKIE_SECURE = True
 
 
 import os
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Set the base directory of your project
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
