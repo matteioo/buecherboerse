@@ -24,7 +24,15 @@ SECRET_KEY = 'django-insecure-x5e(9g4uyg%6fel^fp-xyq!yi+3e_e%+s)y@o3a&okug=5v5mj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","dev.leandergoetz.eu","blog.leandergoetz.eu","leandergoetz.eu","buecherboerse-r33z.onrender.com","bookmarket-frontend.vercel.app"]
+ALLOWED_HOSTS = [
+  "localhost",
+  "127.0.0.1",
+  "dev.leandergoetz.eu",
+  "blog.leandergoetz.eu",
+  "leandergoetz.eu",
+  "buecherboerse-r33z.onrender.com",
+  "bookmarket-frontend.vercel.app",
+] + os.getenv('ADDITIONAL_ALLOWED_HOSTS', '').split(',')
 
 # Application definition
 
